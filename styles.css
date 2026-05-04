@@ -42,6 +42,18 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -95,6 +107,14 @@ h4 { font-size: 1rem; }
   cursor: pointer;
   transition: all var(--transition);
   white-space: nowrap;
+}
+
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.logo:focus-visible,
+.contact-item a:focus-visible,
+.footer-links a:focus-visible {
+  border-radius: 8px;
 }
 
 .btn-primary {
@@ -207,6 +227,18 @@ h4 { font-size: 1rem; }
   transition: all var(--transition);
 }
 
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== Hero ===== */
 .hero {
   padding: 140px 0 80px;
@@ -243,26 +275,6 @@ h4 { font-size: 1rem; }
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 56px;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--color-border);
-}
-
-.stat-num {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-accent);
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
 }
 
 /* ===== Services ===== */
@@ -290,8 +302,25 @@ h4 { font-size: 1rem; }
 }
 
 .service-icon {
-  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   margin-bottom: 16px;
+}
+
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .service-card h3 {
@@ -324,29 +353,6 @@ h4 { font-size: 1rem; }
   color: var(--color-text-secondary);
   margin-bottom: 16px;
   line-height: 1.7;
-}
-
-.about-list {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.about-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-.about-list li::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  flex-shrink: 0;
 }
 
 .about-visual {
@@ -548,8 +554,14 @@ h4 { font-size: 1rem; }
   letter-spacing: 0.04em;
   color: var(--color-text-secondary);
 }
-.contact-item span {
+.contact-item a {
+  color: var(--color-primary);
   font-weight: 500;
+  transition: color var(--transition);
+}
+
+.contact-item a:hover {
+  color: var(--color-primary-dark);
 }
 
 .contact-form {
@@ -613,7 +625,7 @@ h4 { font-size: 1rem; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -702,11 +714,6 @@ h4 { font-size: 1rem; }
   }
 
   .hero { padding: 120px 0 60px; }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 20px;
-  }
 
   .about-grid,
   .contact-grid {

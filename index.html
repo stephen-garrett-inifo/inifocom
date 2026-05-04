@@ -7,14 +7,43 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-cloud" viewBox="0 0 24 24">
+      <path d="M7.5 18.5h9.3a4.2 4.2 0 0 0 .6-8.4A6 6 0 0 0 6.1 8.5 5 5 0 0 0 7.5 18.5Z"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 3.5 19 6v5.2c0 4.4-2.8 7.8-7 9.3-4.2-1.5-7-4.9-7-9.3V6l7-2.5Z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path d="m8.5 8-4 4 4 4"/>
+      <path d="m15.5 8 4 4-4 4"/>
+      <path d="m13 6-2 12"/>
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M4 19.5h16"/>
+      <path d="M7 16v-5"/>
+      <path d="M12 16V7"/>
+      <path d="M17 16v-8"/>
+    </symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="11" rx="2"/>
+      <path d="M9 20h6"/>
+      <path d="M12 16v4"/>
+    </symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"/>
+      <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/>
+    </symbol>
+  </svg>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">
+      <a href="#hero" class="logo">
         <span class="logo-icon">&#9670;</span> inifo, LLC
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
@@ -28,29 +57,15 @@
   <!-- Hero -->
   <header class="hero" id="hero">
     <div class="container hero-content">
-      <p class="hero-tag">Technology Solutions Provider</p>
-      <h1>Building the Future<br>with Intelligent Technology</h1>
+      <p class="hero-tag">Small Business Technology Help</p>
+      <h1>Focused Technology Solutions for Everyday Business Problems</h1>
       <p class="hero-sub">
-        We partner with organizations to design, implement, and manage
-        technology solutions that drive measurable business outcomes.
+        inifo helps small teams improve the tools they already use, automate
+        manual work, and build practical software, data, and IT solutions.
       </p>
       <div class="hero-actions">
         <a href="#services" class="btn btn-primary">Explore Services</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">150+</span>
-          <span class="stat-label">Clients Served</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">12</span>
-          <span class="stat-label">Years in Business</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">99.9%</span>
-          <span class="stat-label">Uptime SLA</span>
-        </div>
       </div>
     </div>
   </header>
@@ -61,55 +76,55 @@
       <p class="section-tag">What We Do</p>
       <h2 class="section-title">Our Services</h2>
       <p class="section-sub">
-        End-to-end technology services tailored to your business needs.
+        Practical help for specific business needs, delivered without unnecessary overhead.
       </p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">&#9881;</div>
-          <h3>Infrastructure &amp; Cloud</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-cloud"></use></svg></div>
+          <h3>Cloud &amp; Tool Setup</h3>
           <p>
-            Cloud migration, hybrid infrastructure design, and managed hosting
-            solutions built for reliability and scale.
+            Configure hosting, domains, email, backups, and cloud services so
+            your business tools are easier to run and support.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128274;</div>
-          <h3>Cybersecurity</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-shield"></use></svg></div>
+          <h3>Security Basics</h3>
           <p>
-            Comprehensive security assessments, monitoring, incident response,
-            and compliance management to protect your assets.
+            Improve passwords, access controls, device practices, backups, and
+            common safeguards without turning security into a second job.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128187;</div>
-          <h3>Software Development</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-code"></use></svg></div>
+          <h3>Custom Software</h3>
           <p>
-            Custom application development, API integrations, and platform
-            engineering using modern frameworks and practices.
+            Build small web apps, internal tools, forms, portals, and API
+            integrations that fit the way your team actually works.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128200;</div>
-          <h3>Data &amp; Analytics</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-chart"></use></svg></div>
+          <h3>Data &amp; Reporting</h3>
           <p>
-            Data pipeline architecture, business intelligence dashboards,
-            and machine learning solutions for actionable insights.
+            Turn spreadsheets, exports, and scattered records into useful
+            reports, dashboards, and repeatable workflows.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#9729;</div>
-          <h3>Managed IT Services</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-monitor"></use></svg></div>
+          <h3>Ongoing IT Support</h3>
           <p>
-            24/7 monitoring, helpdesk support, patch management, and proactive
-            maintenance to keep your operations running smoothly.
+            Get steady help with workstations, software updates, account setup,
+            troubleshooting, and everyday technology questions.
           </p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128101;</div>
-          <h3>IT Consulting</h3>
+          <div class="service-icon" aria-hidden="true"><svg><use href="#icon-compass"></use></svg></div>
+          <h3>Point Solution Planning</h3>
           <p>
-            Strategic technology roadmaps, vendor evaluation, digital
-            transformation planning, and project management.
+            Choose, connect, or replace specific tools with a clear plan,
+            realistic scope, and attention to your budget.
           </p>
         </div>
       </div>
@@ -121,39 +136,31 @@
     <div class="container about-grid">
       <div class="about-content">
         <p class="section-tag">Who We Are</p>
-        <h2 class="section-title">Technology Partners<br>You Can Trust</h2>
+        <h2 class="section-title">Practical Help for Small Teams</h2>
         <p>
-          inifo, LLC is a full-service technology solutions company dedicated
-          to helping businesses leverage technology as a strategic advantage.
-          Founded with the belief that every organization deserves enterprise-grade
-          solutions, we bring deep technical expertise and a consultative approach
-          to every engagement.
+          inifo, LLC helps small businesses solve specific technology problems
+          with clear recommendations, practical implementation, and support that
+          respects your time and budget.
         </p>
         <p>
-          Our team of certified engineers, architects, and consultants work
-          closely with clients across industries including healthcare, finance,
-          manufacturing, and professional services.
+          We work with owners, operators, and lean teams that need better tools,
+          fewer manual steps, cleaner data, or reliable help making systems work
+          together.
         </p>
-        <ul class="about-list">
-          <li>Vendor-agnostic recommendations</li>
-          <li>Certified across major cloud platforms</li>
-          <li>SOC 2 Type II compliant operations</li>
-          <li>Dedicated account management</li>
-        </ul>
       </div>
       <div class="about-visual">
         <div class="about-card">
           <h4>Our Mission</h4>
           <p>
-            To empower organizations with technology solutions that are secure,
-            scalable, and aligned with their business objectives.
+            To help small businesses use technology in focused, useful ways
+            that make daily work simpler.
           </p>
         </div>
         <div class="about-card accent">
           <h4>Our Approach</h4>
           <p>
-            We start by understanding your business goals, then design solutions
-            that deliver value today and adapt as you grow.
+            We start with the problem in front of you, keep the scope grounded,
+            and build only what helps the work move better.
           </p>
         </div>
       </div>
@@ -163,10 +170,10 @@
   <!-- CTA Banner -->
   <section class="cta">
     <div class="container cta-content">
-      <h2>Ready to Transform Your Technology?</h2>
+      <h2>Ready to Fix a Technology Pain Point?</h2>
       <p>
-        Schedule a free consultation with our solutions team to discuss
-        your business objectives and technology needs.
+        Schedule a conversation about the specific workflow, tool, or technology
+        problem you want to improve.
       </p>
       <a href="mailto:info@inifo.com" class="btn btn-primary btn-lg">Schedule a Consultation</a>
     </div>
@@ -184,11 +191,11 @@
       <div class="contact-emails">
         <div class="contact-item">
           <strong>General Inquiries</strong>
-          <span>info@inifo.com</span>
+          <a href="mailto:info@inifo.com">info@inifo.com</a>
         </div>
         <div class="contact-item">
           <strong>Support</strong>
-          <span>support@inifo.com</span>
+          <a href="mailto:support@inifo.com">support@inifo.com</a>
         </div>
       </div>
     </div>
@@ -199,12 +206,11 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="#hero" class="logo">
             <span class="logo-icon">&#9670;</span> inifo, LLC
           </a>
           <p>
-            Technology solutions that drive business outcomes. Secure,
-            scalable, and built for the future.
+            Practical software, data, cloud, and IT help for small businesses.
           </p>
         </div>
         <div class="footer-links">
@@ -221,15 +227,6 @@
           <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Status</a></li>
           </ul>
         </div>
       </div>
